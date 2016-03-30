@@ -10,12 +10,18 @@
 
 typedef enum { false, true } bool;
 
-/*
+/********************************************************************
+Based on Frequency Counter 1 example from pigpio.
+Adapted for dual reading mode 
+- low frequency:  time measurements for a given number of pulses 
+- high frequency: fixed time window pulse counting)
+- magnitude calculation
+
 2014-08-20
 
 gcc -o phot phot.c -lpigpio -lpthread -lm -lrt 
 $ sudo ./phot  4 7 8
-*/
+*********************************************************************/
 
 #define MAX_GPIOS 32
 
